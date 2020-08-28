@@ -1,0 +1,32 @@
+# i18n_en.messages
+#
+# Copyright (c) 2019 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.forum.list.label.title 			= Title
+authenticated.forum.list.label.creation-date 	= Created on
+authenticated.forum.list.label.owner 			= Owner
+
+authenticated.forum.form.label.title 			= Title:
+authenticated.forum.form.label.creation-date 	= Created on:
+authenticated.forum.form.label.owner 			= Owner:
+authenticated.forum.form.label.users 			= Users:
+authenticated.forum.form.label.users.owned		= Users (usernames, separated by commas):
+authenticated.forum.form.label.investment-round = Investment round:
+
+authenticated.forum.form.label.no-inv-round		= This forum isn't associated to any investment round
+
+authenticated.forum.form.error.wrong-username	= The following usernames do not exist or cannot be added: 
+authenticated.forum.form.error.has-inv-round	= This forum cannot be deleted as it belongs to an investment round
+
+authenticated.forum.form.button.messages 		= Messages
+authenticated.forum.form.button.new-message		= Send a message
+authenticated.forum.form.button.update			= Update
+authenticated.forum.form.button.delete			= Delete
+authenticated.forum.form.button.create			= Create
+authenticated.forum.form.button.return 			= Return
