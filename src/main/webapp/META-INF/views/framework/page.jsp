@@ -66,6 +66,8 @@
 			</div>
 		</div>
 		<%@include file="../master/footer.jsp"%>
+		<br>
+		<%@include file="../master/randomBanner.jsp"%>
 		<acme:debug-information system="false"/>
 	</body>
 </html>
