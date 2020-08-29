@@ -30,7 +30,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="John" />
 				<property name="surname" value="Doe" />
-				<property name="email" value="john.doe@acme.com" />
+				<property name="email">
+					<ref bean="customEmail01" />
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -54,7 +56,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Kate" />
 				<property name="surname" value="Hoshimiya" />
-				<property name="email" value="hoshimiya.kate@acme.com" />
+				<property name="email">
+					<ref bean="customEmail02" />
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -76,7 +80,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Pekora" />
 				<property name="surname" value="Usada" />
-				<property name="email" value="usada.pekora@acme.com" />
+				<property name="email">
+					<ref bean="customEmail03" />
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -100,7 +106,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Administrator" />
 				<property name="surname" value="Acme.com" />
-				<property name="email" value="administrator@acme.com" />
+				<property name="email">
+					<ref bean="customEmail04" />
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -127,7 +135,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Admin" />
 				<property name="surname" value="Acme.com" />
-				<property name="email" value="admin@acme.com" />
+				<property name="email">
+					<ref bean="customEmail05" />
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -153,6 +163,31 @@
 		<property name="threshold" value="2.50"/>
 		<property name="activitySectors" value="Technology; Science; Arts; Business; Health"/>
 		<property name="invRoundKinds" value="SEED; ANGEL; SERIES-A; SERIES-B; SERIES-C; BRIDGE"/>
+	</bean>
+	
+	<!-- CustomEmails -->
+	
+	<bean id="customEmail01" class="acme.datatypes.CustomEmail">
+		<property name="displayName" value="John Doe" />
+		<property name="email" value="john.doe@acme.com" />
+	</bean>
+	
+	<bean id="customEmail02" class="acme.datatypes.CustomEmail">
+		<property name="displayName" value="Kate Hoshimiya" />
+		<property name="email" value="hoshimiya.kate@acme.com" />
+	</bean>
+	
+	<bean id="customEmail03" class="acme.datatypes.CustomEmail">
+		<property name="displayName" value="PekoraUsada" />
+		<property name="email" value="usada.pekora@acme.com" />
+	</bean>
+	
+	<bean id="customEmail04" class="acme.datatypes.CustomEmail">
+		<property name="email" value="administrator@acme.com" />
+	</bean>
+	
+	<bean id="customEmail05" class="acme.datatypes.CustomEmail">
+		<property name="email" value="admin@acme.com" />
 	</bean>
 	
 </beans>

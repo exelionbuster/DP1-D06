@@ -29,7 +29,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Patata" />
 				<property name="surname" value="Potato" />
-				<property name="email" value="patata.potato@acme.com" />
+				<property name="email">
+					<ref bean="customEmail27" />
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -52,7 +54,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Patron"/>
 				<property name="surname" value="One"/>
-				<property name="email" value="patron1@gmail.com"/>
+				<property name="email">
+					<ref bean="customEmail28" />
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -85,7 +89,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Patron"/>
 				<property name="surname" value="Two"/>
-				<property name="email" value="patron2@gmail.com"/>
+				<property name="email">
+					<ref bean="customEmail29" />
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -118,7 +124,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Patron"/>
 				<property name="surname" value="Three"/>
-				<property name="email" value="patron3@gmail.com"/>
+				<property name="email">
+					<ref bean="customEmail30" />
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -144,6 +152,7 @@
 	</bean>
 		
 	<!-- Entrepreneurs -->
+	
 	<bean id="entrepreneur1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="entrepreneur1"/>
 		<property name="password" value="entrepreneur1"/>
@@ -152,7 +161,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Entrepreneur"/>
 				<property name="surname" value="One"/>
-				<property name="email" value="entrepreneur1@gmail.com"/>
+				<property name="email">
+					<ref bean="customEmail31" />
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -183,7 +194,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Entrepreneur"/>
 				<property name="surname" value="Two"/>
-				<property name="email" value="entrepreneur2@gmail.com"/>
+				<property name="email">
+					<ref bean="customEmail32" />
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -216,7 +229,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Investor" />
 				<property name="surname" value="One" />
-				<property name="email" value="investor1@acme.com" />
+				<property name="email">
+					<ref bean="customEmail33" />
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -246,7 +261,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Investor" />
 				<property name="surname" value="Two" />
-				<property name="email" value="investor2@acme.com" />
+				<property name="email">
+					<ref bean="customEmail34" />
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -278,7 +295,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Bookkeeper"/>
 				<property name="surname" value="One"/>
-				<property name="email" value="bookkeeper1@microsoft.com"/>
+				<property name="email">
+					<ref bean="customEmail35"/>
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -307,7 +326,9 @@
 			<bean class="acme.datatypes.UserIdentity">
 				<property name="name" value="Bookkeeper"/>
 				<property name="surname" value="Two"/>
-				<property name="email" value="bookkeeper2@monsanto.com"/>
+				<property name="email">
+					<ref bean="customEmail36"/>
+				</property>
 			</bean>
 		</property>
 		<property name="roles">
@@ -341,21 +362,28 @@
 		    <property name="author" value="Alberto Toledo Mayorga" />
 		    <property name="text" value="Estoy feliz, prueba 1" />
 		    <property name="moment" value="2020/07/22 17:46" />
-		    <property name="email" value="email@prueba1.com" />
+		    <property name="email">
+		    	<ref bean="customEmail06" />
+		    </property>
+
 	  </bean>
 	
 	  <bean id="ToledoBulletin02"	class="acme.entities.bulletins.ToledoBulletin">
 		    <property name="author" value="Alberto Toledo Mayorga" />
 		    <property name="text" value="Estoy muy feliz, prueba 2" />
 		    <property name="moment" value="2020/07/22 17:47" />
-		    <property name="email" value="email@prueba2.com" />
+		    <property name="email">
+		    	<ref bean="customEmail07" />
+		    </property>
 	  </bean>
 	  
 	  <bean id="ToledoBulletin03"	class="acme.entities.bulletins.ToledoBulletin">
 		    <property name="author" value="Alberto Toledo Mayorga" />
 		    <property name="text" value="Estoy muy, pero que muy feliz, prueba 3" />
 		    <property name="moment" value="2020/07/22 17:48" />
-		    <property name="email" value="email@prueba3.com" />
+		    <property name="email">
+		    	<ref bean="customEmail08" />
+		    </property>
 	  </bean>
 
 	<!-- FernandezBulletins -->
@@ -433,7 +461,9 @@
 		<property name="inventor" value="Dr. Robotnik" />
 		<property name="description" value="Sample description" />
 		<property name="webSite" value="http://example1.com" />
-		<property name="email" value="mail1@example.com" />
+		<property name="email">
+			<ref bean="customEmail09" />
+		</property> 
 		<property name="openSource" value="false" />
 		<property name="stars" value="3.0" />
 	</bean>
@@ -444,7 +474,9 @@
 		<property name="inventor" value="Beakman" />
 		<property name="description" value="Sample description" />
 		<property name="webSite" value="http://example2.com" />
-		<property name="email" value="mail2@example.com" />
+		<property name="email">
+			<ref bean="customEmail10" />
+		</property> 
 		<property name="openSource" value="true" />
 		<property name="stars" value="1.0" />
 	</bean>
@@ -455,7 +487,9 @@
 		<property name="inventor" value="Dr. Willy" />
 		<property name="description" value="Sample description" />
 		<property name="webSite" value="http://example3.com" />
-		<property name="email" value="mail3@example.com" />
+		<property name="email">
+			<ref bean="customEmail11" />
+		</property> 
 		<property name="openSource" value="false" />
 		<property name="stars" value="-3.0" />
 	</bean>
@@ -466,7 +500,9 @@
 		<property name="inventor" value="Dr. Emmett Brown (Doc)" />
 		<property name="description" value="Sample description" />
 		<property name="webSite" value="http://example4.com" />
-		<property name="email" value="mail4@example.com" />
+		<property name="email">
+			<ref bean="customEmail12" />
+		</property> 
 		<property name="openSource" value="true" />
 		<property name="stars" value="5.0" />
 	</bean>
@@ -477,7 +513,9 @@
 		<property name="inventor" value="Morty Sánchez" />
 		<property name="description" value="Sample description" />
 		<property name="webSite" value="http://example5.com" />
-		<property name="email" value="mail5@example.com" />
+		<property name="email">
+			<ref bean="customEmail13" />
+		</property> 
 		<property name="openSource" value="false" />
 		<property name="stars" value="-5.0" />
 	</bean>
@@ -488,7 +526,9 @@
 		<property name="inventor" value="Rintaro Okabe" />
 		<property name="description" value="Sample description" />
 		<property name="webSite" value="http://steinsgate.jp/" />
-		<property name="email" value="mail5@example.com" />
+		<property name="email">
+			<ref bean="customEmail14" />
+		</property> 
 		<property name="openSource" value="false" />
 		<property name="stars" value="-5.0" />
 	</bean>
@@ -501,7 +541,9 @@
 		<property name="inventor" value="Dr. Pepper" />
 		<property name="description" value="Sample description" />
 		<property name="webSite" value="http://example1.com" />
-		<property name="email" value="mail1@example.com" />
+		<property name="email">
+			<ref bean="customEmail15" />
+		</property> 
 		<property name="openSource" value="false" />
 		<property name="stars" value="1.0" />
 	</bean>
@@ -512,7 +554,9 @@
 		<property name="inventor" value="Marcus Fenix" />
 		<property name="description" value="Sample description" />
 		<property name="webSite" value="http://example2.com" />
-		<property name="email" value="mail2@example.com" />
+		<property name="email">
+			<ref bean="customEmail16" />
+		</property> 
 		<property name="openSource" value="true" />
 		<property name="stars" value="-2.0" />
 	</bean>
@@ -523,7 +567,9 @@
 		<property name="inventor" value="Megaman" />
 		<property name="description" value="Sample description" />
 		<property name="webSite" value="http://example3.com" />
-		<property name="email" value="mail3@example.com" />
+		<property name="email">
+			<ref bean="customEmail17" />
+		</property> 
 		<property name="openSource" value="false" />
 		<property name="stars" value="0.0" />
 	</bean>
@@ -534,7 +580,9 @@
 		<property name="inventor" value="Marty McFly" />
 		<property name="description" value="Sample description" />
 		<property name="webSite" value="http://example4.com" />
-		<property name="email" value="mail4@example.com" />
+		<property name="email">
+			<ref bean="customEmail18" />
+		</property> 
 		<property name="openSource" value="true" />
 		<property name="stars" value="-4.0" />
 	</bean>
@@ -545,7 +593,9 @@
 		<property name="inventor" value="Al Pacino" />
 		<property name="description" value="Sample description" />
 		<property name="webSite" value="http://example5.com" />
-		<property name="email" value="mail5@example.com" />
+		<property name="email">
+			<ref bean="customEmail19" />
+		</property> 
 		<property name="openSource" value="false" />
 		<property name="stars" value="5.0" />
 	</bean>
@@ -556,7 +606,9 @@
 		<property name="inventor" value="Natasha" />
 		<property name="description" value="Sample description" />
 		<property name="webSite" value="https://www.sekaiseifuku-zzz.com/" />
-		<property name="email" value="mail5@example.com" />
+		<property name="email">
+			<ref bean="customEmail20" />
+		</property> 
 		<property name="openSource" value="false" />
 		<property name="stars" value="5.0" />
 	</bean>
@@ -574,7 +626,9 @@
     <property name="maxMoney">
     	<ref bean="money02"/>
     </property>
-    <property name="contactEmail" value="contactEmail@gmail.com"/>
+    <property name="contactEmail">
+    	<ref bean="customEmail21" />
+    </property>
   </bean>
  
   <bean id="inquiry02" class="acme.entities.inquiries.Inquiry" >
@@ -588,7 +642,9 @@
     <property name="maxMoney">
     	<ref bean="money04"/>
     </property>
-    <property name="contactEmail" value="contactEmail@gmail.com"/>
+    <property name="contactEmail">
+    	<ref bean="customEmail22" />
+    </property>
   </bean>
 
   <bean id="inquiry03" class="acme.entities.inquiries.Inquiry" >
@@ -602,7 +658,9 @@
     <property name="maxMoney">
     	<ref bean="money05"/>
     </property>
-    <property name="contactEmail" value="contactEmail@gmail.com"/>
+    <property name="contactEmail">
+    	<ref bean="customEmail23" />
+    </property>
   </bean>
   
     <!-- Overtures -->
@@ -618,7 +676,9 @@
     <property name="maxMoney">
     	<ref bean="money02"/>
     </property>
-    <property name="contactEmail" value="contactEmail@gmail.com"/>
+    <property name="contactEmail">
+    	<ref bean="customEmail24" />
+    </property>
   </bean> 
  
   <bean id="overture02" class="acme.entities.overtures.Overture" >
@@ -632,7 +692,9 @@
     <property name="maxMoney">
     	<ref bean="money04"/>
     </property>
-    <property name="contactEmail" value="contactEmail@gmail.com"/>
+    <property name="contactEmail">
+    	<ref bean="customEmail25" />
+    </property>
   </bean>
 
   <bean id="overture03" class="acme.entities.overtures.Overture" >
@@ -646,7 +708,9 @@
     <property name="maxMoney">
     	<ref bean="money05"/>
     </property>
-    <property name="contactEmail" value="contactEmail@gmail.com"/>
+    <property name="contactEmail">
+    	<ref bean="customEmail26" />
+    </property>
   </bean>
   
   
@@ -1097,5 +1161,132 @@
   	<property name="amount" value="800"/>
   	<property name="currency" value="€"/>
   </bean>  
+  
+  	<bean id="customEmail06" class="acme.datatypes.CustomEmail">
+		<property name="displayName" value="Alberto Toledo" />
+		<property name="email" value="toledo1@acme.com" />
+	</bean>
+	
+	<bean id="customEmail07" class="acme.datatypes.CustomEmail">
+		<property name="displayName" value="Alberto Toledo" />
+		<property name="email" value="toledo2@acme.com" />
+	</bean>
+	
+	<bean id="customEmail08" class="acme.datatypes.CustomEmail">
+		<property name="displayName" value="Alberto Toledo" />
+		<property name="email" value="toledo3@acme.com" />
+	</bean>
+	
+	<bean id="customEmail09" class="acme.datatypes.CustomEmail">
+		<property name="email" value="tech1@acme.com" />
+	</bean>
+	
+	<bean id="customEmail10" class="acme.datatypes.CustomEmail">
+		<property name="email" value="tech2@acme.com" />
+	</bean>
+	
+	<bean id="customEmail11" class="acme.datatypes.CustomEmail">
+		<property name="email" value="tech3@acme.com" />
+	</bean>
+	
+	<bean id="customEmail12" class="acme.datatypes.CustomEmail">
+		<property name="email" value="tech4@acme.com" />
+	</bean>
+	
+	<bean id="customEmail13" class="acme.datatypes.CustomEmail">
+		<property name="email" value="tech5@acme.com" />
+	</bean>
+	
+	<bean id="customEmail14" class="acme.datatypes.CustomEmail">
+		<property name="email" value="tech6@acme.com" />
+	</bean>
+	
+	<bean id="customEmail15" class="acme.datatypes.CustomEmail">
+		<property name="email" value="tool1@acme.com" />
+	</bean>
+	
+	<bean id="customEmail16" class="acme.datatypes.CustomEmail">
+		<property name="email" value="tool2@acme.com" />
+	</bean>
+	
+	<bean id="customEmail17" class="acme.datatypes.CustomEmail">
+		<property name="email" value="tool3@acme.com" />
+	</bean>
+	
+	<bean id="customEmail18" class="acme.datatypes.CustomEmail">
+		<property name="email" value="tool4@acme.com" />
+	</bean>
+	
+	<bean id="customEmail19" class="acme.datatypes.CustomEmail">
+		<property name="email" value="tool5@acme.com" />
+	</bean>
+	
+	<bean id="customEmail20" class="acme.datatypes.CustomEmail">
+		<property name="email" value="tool6@acme.com" />
+	</bean>
+	
+	<bean id="customEmail21" class="acme.datatypes.CustomEmail">
+		<property name="email" value="inquiry1@acme.com" />
+	</bean>
+	
+	<bean id="customEmail22" class="acme.datatypes.CustomEmail">
+		<property name="email" value="inquiry2@acme.com" />
+	</bean>
+	
+	<bean id="customEmail23" class="acme.datatypes.CustomEmail">
+		<property name="email" value="inquiry3@acme.com" />
+	</bean>
+	
+	<bean id="customEmail24" class="acme.datatypes.CustomEmail">
+		<property name="email" value="overture1@acme.com" />
+	</bean>
+	
+	<bean id="customEmail25" class="acme.datatypes.CustomEmail">
+		<property name="email" value="overture2@acme.com" />
+	</bean>
+	
+	<bean id="customEmail26" class="acme.datatypes.CustomEmail">
+		<property name="email" value="overture3@acme.com" />
+	</bean>
+	
+	<bean id="customEmail27" class="acme.datatypes.CustomEmail">
+		<property name="email" value="patata.potato@acme.com" />
+	</bean>
+	
+	<bean id="customEmail28" class="acme.datatypes.CustomEmail">
+		<property name="email" value="patron1@acme.com" />
+	</bean>
+	
+	<bean id="customEmail29" class="acme.datatypes.CustomEmail">
+		<property name="email" value="patron2@acme.com" />
+	</bean>
+	
+	<bean id="customEmail30" class="acme.datatypes.CustomEmail">
+		<property name="email" value="patron3@acme.com" />
+	</bean>
+	
+	<bean id="customEmail31" class="acme.datatypes.CustomEmail">
+		<property name="email" value="entrepreneur1@acme.com" />
+	</bean>
+	
+	<bean id="customEmail32" class="acme.datatypes.CustomEmail">
+		<property name="email" value="entrepreneur2@acme.com" />
+	</bean>
+	
+	<bean id="customEmail33" class="acme.datatypes.CustomEmail">
+		<property name="email" value="investor1@acme.com" />
+	</bean>
+	
+	<bean id="customEmail34" class="acme.datatypes.CustomEmail">
+		<property name="email" value="investor2@acme.com" />
+	</bean>
+	
+	<bean id="customEmail35" class="acme.datatypes.CustomEmail">
+		<property name="email" value="bookkeeper1@microsoft.com" />
+	</bean>
+	
+	<bean id="customEmail36" class="acme.datatypes.CustomEmail">
+		<property name="email" value="bookkeeper2@monsanto.com" />
+	</bean>
 
 </beans>

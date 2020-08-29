@@ -6,10 +6,12 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.Email;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 
+import acme.datatypes.CustomEmail;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -34,8 +36,8 @@ public class ToledoBulletin extends DomainEntity {
 	@Past
 	private Date				moment;
 
-	@NotBlank
-	@Email
-	private String				email;
+	@NotNull
+	@Valid
+	private CustomEmail			email;
 
 }
