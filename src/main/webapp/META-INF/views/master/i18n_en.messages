@@ -79,11 +79,6 @@ master.menu.administrator.user-accounts 			= User accounts
 master.menu.administrator.configuration 			= Configuration
 master.menu.administrator.shutdown 					= Shut down
 
-# master.menu.consumer ##########################################################
-
-master.menu.consumer = Consumer
-master.menu.consumer.favourite-link = Favourite link
-
 # master.menu.entrepreneur ##########################################################
 
 master.menu.entrepreneur = Entrepreneur
@@ -113,8 +108,6 @@ master.menu.patron.banner.create = New banner
 
 master.menu.user-account = Account
 master.menu.user-account.general-data = General data
-master.menu.user-account.consumer = Consumer data
-master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.become-entrepreneur = Become an entrepreneur
 master.menu.user-account.entrepreneur = Entrepreneur data
 master.menu.user-account.become-patron = Become a patron
