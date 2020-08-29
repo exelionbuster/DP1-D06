@@ -776,9 +776,9 @@
   <!-- Banners -->
   
   <bean id="banner01" class="acme.entities.banners.Banner" >
-  	<property name="picture" value="https://upload.wikimedia.org/wikipedia/commons/4/4f/Black_hole_-_Messier_87_crop_max_res.jpg" />
-  	<property name="slogan" value="Esto es un agujero negro" />
-  	<property name="target" value="https://es.wikipedia.org/" />
+  	<property name="picture" value="https://memestatic1.fjcdn.com/comments/You+must+login+to+view+this+comment+_d8148286581f0e1ec82a7c338f50b075.jpg" />
+  	<property name="slogan" value="Wide Miyako is wide" />
+  	<property name="target" value="https://en.wikipedia.org/wiki/Hidamari_Sketch" />
   	<property name="creditCard">
   		<ref bean="creditCard01"/>
   	</property>
@@ -786,9 +786,9 @@
   </bean>
   
   <bean id="banner02" class="acme.entities.banners.Banner" >
-  	<property name="picture" value="https://upload.wikimedia.org/wikipedia/commons/d/d1/Artist%E2%80%99s_impression_of_the_quasar_3C_279.jpg" />
-  	<property name="slogan" value="Aquí vemos un quasar" />
-  	<property name="target" value="https://es.wikipedia.org/" />
+  	<property name="picture" value="https://i.imgur.com/DFqnDyU.jpg" />
+  	<property name="slogan" value="So evil!" />
+  	<property name="target" value="http://gabdro.com/" />
   	<property name="creditCard">
   		<ref bean="creditCard01"/>
   	</property>
@@ -804,13 +804,43 @@
   </bean>
   
   <bean id="banner04" class="acme.entities.banners.Banner" >
-  	<property name="picture" value="https://upload.wikimedia.org/wikipedia/commons/f/f0/Vega_-_star_in_Lyra.png" />
-  	<property name="slogan" value="La estrella Vega de nuevo" />
-  	<property name="target" value="https://es.wikipedia.org/" />
+  	<property name="picture" value="https://shadowverse.com/assets/images/cards_banner_11th.png" />
+  	<property name="slogan" value="Thousand of cards, infinite possibilities" />
+  	<property name="target" value="https://shadowverse.com/" />
   	<property name="creditCard">
   		<ref bean="creditCard03"/>
   	</property>
   	<property name="patron" ref="patron3Patron" />
+  </bean>
+  
+  <bean id="banner05" class="acme.entities.banners.Banner" >
+  	<property name="picture" value="https://portal.symphogear.com/bnr/XVlogo.png" />
+  	<property name="slogan" value="In the distance, that day, when the star became music..." />
+  	<property name="target" value="https://www.symphogear-xv.com/" />
+  	<property name="creditCard">
+  		<ref bean="creditCard03"/>
+  	</property>
+  	<property name="patron" ref="patron3Patron" />
+  </bean>
+  
+  <bean id="banner06" class="acme.entities.banners.Banner" >
+  	<property name="picture" value="https://static2.cbrimages.com/wordpress/wp-content/uploads/2020/03/10-Reasons-Why-Shakugan-No-Shana-Is-The-Best-Anime-Series.jpg" />
+  	<property name="slogan" value="Those who rely on “someday” will only grow weaker and lowlier" />
+  	<property name="target" value="https://www.shakugan.com/" />
+  	<property name="creditCard">
+  		<ref bean="creditCard03"/>
+  	</property>
+  	<property name="patron" ref="patron3Patron" />
+  </bean>
+  
+  <bean id="banner07" class="acme.entities.banners.Banner" >
+  	<property name="picture" value="https://pbs.twimg.com/media/DqUVDYDUUAAQ0cJ.jpg" />
+  	<property name="slogan" value="Fumo supremacy" />
+  	<property name="target" value="https://www.youtube.com/channel/UCVv6OI4dMDrFWPXLxZrONng" />
+  	<property name="creditCard">
+  		<ref bean="creditCard01"/>
+  	</property>
+  	<property name="patron" ref="patron1Patron" />
   </bean>
 	
 	<!-- InvestmentRounds -->
