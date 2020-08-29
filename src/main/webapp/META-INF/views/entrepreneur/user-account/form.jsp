@@ -22,7 +22,7 @@
 	
 	<acme:form-textbox code="entrepreneur.user-account.form.label.name" path="identity.name"/>
 	<acme:form-textbox code="entrepreneur.user-account.form.label.surname" path="identity.surname"/>
-	<acme:form-textbox code="entrepreneur.user-account.form.label.email" path="identity.email"/>
+	<acme:form-customemail code="entrepreneur.user-account.form.label.email" path="identity.email"/>
 	 
 	<acme:form-submit code="entrepreneur.user-account.form.button.update" action="/entrepreneur/user-account/update"/>
   	<acme:form-return code="entrepreneur.user-account.form.button.return"/>

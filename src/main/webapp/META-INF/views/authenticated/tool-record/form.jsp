@@ -20,7 +20,7 @@
 	<acme:form-textbox code="authenticated.tool-record.form.label.inventor" path="inventor" />
 	<acme:form-textbox code="authenticated.tool-record.form.label.description" path="description" />
 	<acme:form-url code="authenticated.tool-record.form.label.website" path="webSite" />
-	<acme:form-textbox code="authenticated.tool-record.form.label.email" path="email"/>
+	<acme:form-customemail code="authenticated.tool-record.form.label.email" path="email"/>
 	<acme:form-textbox code="authenticated.tool-record.form.label.licence" path="licence" />
 	<acme:form-textbox code="authenticated.tool-record.form.label.stars" path="stars"/>
 	
