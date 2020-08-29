@@ -1,5 +1,5 @@
 /*
- * AuthenticatedProviderUpdateService.java
+ * AuthenticatedEntrepreneurUpdateService.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -40,7 +40,7 @@ public class AuthenticatedEntrepreneurUpdateService implements AbstractUpdateSer
 	private AuthenticatedEntrepreneurRepository repository;
 
 
-	// AbstractUpdateService<Authenticated, Provider> interface ---------------
+	// AbstractUpdateService<Authenticated, Entrepreneur> interface ---------------
 
 	@Override
 	public boolean authorise(final Request<Entrepreneur> request) {

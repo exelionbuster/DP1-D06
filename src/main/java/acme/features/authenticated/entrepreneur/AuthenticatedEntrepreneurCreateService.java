@@ -1,5 +1,5 @@
 /*
- * AuthenticatedProviderCreateService.java
+ * AuthenticatedEntrepreneurCreateService.java
  *
  * Copyright (c) 2019 Rafael Corchuelo.
  *
@@ -41,7 +41,7 @@ public class AuthenticatedEntrepreneurCreateService implements AbstractCreateSer
 	private AuthenticatedEntrepreneurRepository repository;
 
 
-	// AbstractCreateService<Authenticated, Provider> interface ---------------
+	// AbstractCreateService<Authenticated, Entrepreneur> interface ---------------
 
 	@Override
 	public boolean authorise(final Request<Entrepreneur> request) {
