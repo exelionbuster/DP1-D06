@@ -26,7 +26,7 @@ public class CustomEmailFormatter implements Formatter<CustomEmail> {
 		String res;
 		String emailText, displayName;
 
-		if (object.getDisplayName() == "") {
+		if (object.getDisplayName() == "" || object.getDisplayName() == null) {
 			emailText = String.format("%s", object.getEmail());
 			res = String.format("%s", emailText);
 		} else {
@@ -50,7 +50,7 @@ public class CustomEmailFormatter implements Formatter<CustomEmail> {
 
 		emailRegex = "([a-zA-Z0-9!#$%&'*+\\/=?^_`{|}~-]+(?:\\.[a-zA-Z0-9!#$%&'*+\\/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)";
 		displayNameRegex = ".{1,} ";
-		customEmailRegex = String.format("^((?<E>%1$s))|((?<DN>%2$s)\\<(?<EN>%1$s)\\>)$", emailRegex, displayNameRegex);
+		customEmailRegex = String.format("^(?<E>%1$s)|((?<DN>%2$s)\\<(?<EN>%1$s)\\>)$", emailRegex, displayNameRegex);
 
 		pattern = Pattern.compile(customEmailRegex, Pattern.CASE_INSENSITIVE | Pattern.UNICODE_CASE);
 		matcher = pattern.matcher(text);
@@ -59,9 +59,14 @@ public class CustomEmailFormatter implements Formatter<CustomEmail> {
 			errorMessage = MessageHelper.getMessage("default.error.conversion", null, "Invalid value", locale);
 			throw new ParseException(errorMessage, 0);
 		} else {
-			displayName = matcher.group("DN").trim();
-			if (displayName != "") {
-				email = matcher.group("EN");
+			displayName = matcher.group("DN");
+			if (displayName != null) {
+				if (!displayName.trim().equals("")) {
+					email = matcher.group("EN");
+				} else {
+					errorMessage = MessageHelper.getMessage("default.error.conversion", null, "Invalid value", locale);
+					throw new ParseException(errorMessage, 0);
+				}
 			} else {
 				email = matcher.group("E");
 			}
