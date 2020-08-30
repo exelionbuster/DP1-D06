@@ -909,16 +909,16 @@
 	
 	<!-- InvestmentRounds -->
 	<bean id="investmentRound1" class="acme.entities.investmentRounds.InvestmentRound">
-		<property name="ticker" value="ART-20-014683"/>
+		<property name="ticker" value="TEC-20-014683"/>
 		<property name="creationDate" value="2020/05/01 12:30"/>
 		<property name="kind" value="SEED"/>
-		<property name="title" value="Title Investment round 1"/>
+		<property name="title" value="Investment round 1"/>
 		<property name="description" value="Description Investment round 1"/>
 		<property name="amount">
 			<ref bean="money07"/>
 		</property>
 		<property name="link" value="https://www.google.com/"/>
-		<property name="finalMode" value="false"/>
+		<property name="finalMode" value="true"/>
 		<property name="entrepreneur" ref="entrepreneur1Entrepreneur"/>
 	</bean>
 	
@@ -1004,7 +1004,7 @@
 		<!-- Applications -->
 	
 	<bean name="application1" class="acme.entities.applications.Application">
-		<property name="ticker" value="SSS-20-000001" />		
+		<property name="ticker" value="TEC-20-000001" />		
 		<property name="creationDate" value="2000/12/11 23:59" />
 		<property name="statement" value="example 1" />
 		<property name="status" value="accepted" />
@@ -1017,7 +1017,7 @@
 	</bean>
 	
 	<bean name="application2" class="acme.entities.applications.Application">
-		<property name="ticker" value="SSS-20-000002" />		
+		<property name="ticker" value="SCI-20-000002" />		
 		<property name="creationDate" value="2000/12/11 23:59" />
 		<property name="statement" value="example 2" />
 		<property name="status" value="rejected" />
@@ -1030,7 +1030,7 @@
 	</bean>
 	
 	<bean name="application3" class="acme.entities.applications.Application">
-		<property name="ticker" value="SSS-20-000003" />		
+		<property name="ticker" value="SCI-20-000003" />		
 		<property name="creationDate" value="2000/12/11 23:59" />
 		<property name="statement" value="example 3" />
 		<property name="status" value="pending" />
@@ -1039,7 +1039,20 @@
 		</property>
 		<property name="justification" value=""/>
 		<property name="investor" ref="investor2Investor" />
-		<property name="investmentRound" ref="investmentRound2" />
+		<property name="investmentRound" ref="investmentRound3" />
+	</bean>
+	
+	<bean name="application4" class="acme.entities.applications.Application">
+		<property name="ticker" value="TEC-20-000003" />		
+		<property name="creationDate" value="2000/12/11 23:59" />
+		<property name="statement" value="example 3" />
+		<property name="status" value="rejected" />
+		<property name="offer">
+			<ref bean="money04"/>
+		</property>
+		<property name="justification" value="It's the same as the other one."/>
+		<property name="investor" ref="investor2Investor" />
+		<property name="investmentRound" ref="investmentRound3" />
 	</bean>
 	
 	<!-- AccountingRecords -->
@@ -1083,7 +1096,7 @@
 	<!-- Forums -->
 	
 	<bean id="forum1" class="acme.entities.forums.Forum">
-		<property name="title" value="Investment round 1"/>
+		<property name="title" value="Investment round 1's discussion forum"/>
 		<property name="creationDate" value="2020/05/01 12:30" />
 		<property name="investmentRound" ref="investmentRound1"/>
 		<property name="owner" ref="entrepreneur1Authenticated"/>
@@ -1096,9 +1109,9 @@
 	</bean>
 	
 	<bean id="forum2" class="acme.entities.forums.Forum">
-		<property name="title" value="Investment round 2"/>
+		<property name="title" value="Investment round 3's discussion forum"/>
 		<property name="creationDate" value="2020/04/12 11:35" />
-		<property name="investmentRound" ref="investmentRound2"/>
+		<property name="investmentRound" ref="investmentRound3"/>
 		<property name="owner" ref="entrepreneur2Authenticated"/>
 		<property name="involvedUsers">
 			<list>
