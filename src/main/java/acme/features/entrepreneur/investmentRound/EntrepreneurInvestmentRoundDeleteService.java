@@ -113,8 +113,10 @@ public class EntrepreneurInvestmentRoundDeleteService implements AbstractDeleteS
 		Collection<Activity> activities = this.activityRepository.findActivitiesByInvestmentRound(entity.getId());
 		this.activityRepository.deleteAll(activities);
 
-		Forum forum = this.forumRepository.findOneByInvRoundId(entity.getId());
-		if (forum != null) {
+		if (entity.isFinalMode()) {
+			Forum forum = this.forumRepository.findOneByInvRoundId(entity.getId());
+			forum.getInvolvedUsers().clear();
+			this.forumRepository.save(entity);
 			this.forumRepository.delete(forum);
 		}
 
