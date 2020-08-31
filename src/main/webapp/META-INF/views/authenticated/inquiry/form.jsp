@@ -10,7 +10,7 @@
 	<acme:form-textarea code="authenticated.inquiry.form.label.description" path="description"/>
 	<acme:form-money code="authenticated.inquiry.form.label.min-money" path="minMoney"/>
 	<acme:form-money code="authenticated.inquiry.form.label.max-money" path="maxMoney"/>
-	<acme:form-textbox code="authenticated.inquiry.form.label.contact-email" path="contactEmail"/>
+	<acme:form-customemail code="authenticated.inquiry.form.label.contact-email" path="contactEmail"/>
 	
 	<acme:form-return code="authenticated.inquiry.form.button.return" />
 		

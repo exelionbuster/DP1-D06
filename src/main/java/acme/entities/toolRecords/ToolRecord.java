@@ -3,12 +3,14 @@ package acme.entities.toolRecords;
 
 import javax.persistence.Entity;
 import javax.persistence.Transient;
-import javax.validation.constraints.Email;
+import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
 
+import acme.datatypes.CustomEmail;
 import acme.framework.entities.DomainEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -40,9 +42,9 @@ public class ToolRecord extends DomainEntity {
 	@NotBlank
 	private String				webSite;
 
-	@Email
-	@NotBlank
-	private String				email;
+	@NotNull
+	@Valid
+	private CustomEmail			email;
 
 	private boolean				openSource;
 

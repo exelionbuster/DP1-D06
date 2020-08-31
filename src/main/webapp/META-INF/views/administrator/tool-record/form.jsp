@@ -10,7 +10,7 @@
 	
 	<acme:form-textbox code="administrator.tool-record.form.label.title" path="title" />
 	<acme:form-select code="administrator.tool-record.form.label.activity-sector" path="activitySector">
-		<jstl:if test="${command !=create}">
+		<jstl:if test="${command !='create'}">
 			<acme:form-option code="${activitySector}" value="${activitySector}"/>
 		</jstl:if>
 		<jstl:forEach items="${sectors}"  var="sector">
@@ -18,9 +18,9 @@
 		</jstl:forEach>
 	</acme:form-select>
 	<acme:form-textbox code="administrator.tool-record.form.label.inventor" path="inventor" />
-	<acme:form-textbox code="administrator.tool-record.form.label.description" path="description" />
+	<acme:form-textarea code="administrator.tool-record.form.label.description" path="description" />
 	<acme:form-url code="administrator.tool-record.form.label.website" path="webSite" />
-	<acme:form-textbox code="administrator.tool-record.form.label.email" path="email"/>
+	<acme:form-customemail code="administrator.tool-record.form.label.email" path="email"/>
 	<acme:form-checkbox code="administrator.tool-record.form.label.open-source" path="openSource" />
 	<jstl:choose>
     	<jstl:when test="${stars == null}">

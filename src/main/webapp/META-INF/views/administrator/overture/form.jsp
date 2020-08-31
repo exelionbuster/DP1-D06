@@ -15,7 +15,7 @@
 	<acme:form-textarea code="administrator.overture.form.label.description" path="description"/>
 	<acme:form-money code="administrator.overture.form.label.min-money" path="minMoney"/>
 	<acme:form-money code="administrator.overture.form.label.max-money" path="maxMoney"/>
-	<acme:form-textbox code="administrator.overture.form.label.contact-email" path="contactEmail"/>
+	<acme:form-customemail code="administrator.overture.form.label.contact-email" path="contactEmail"/>
 	
 
 	<acme:form-submit test="${command == 'create'}" code="administrator.overture.form.button.create" action="/administrator/overture/create"/>

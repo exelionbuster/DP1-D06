@@ -5,7 +5,7 @@
 
 <acme:form>
 	<acme:form-textbox code="anonymous.bulletin.toledo.form.label.author" path="author"/>
-	<acme:form-textbox code="anonymous.bulletin.toledo.form.label.email" path="email"/>
+	<acme:form-customemail code="anonymous.bulletin.toledo.form.label.email" path="email"/>
 	<acme:form-textarea code="anonymous.bulletin.toledo.form.label.text" path="text"/>
 	<acme:form-submit code="anonymous.bulletin.toledo.form.button.create" action="/anonymous/toledo-bulletin/create"/>
 	<acme:form-return code="anonymous.bulletin.toledo.form.button.return"/>

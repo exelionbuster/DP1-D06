@@ -15,7 +15,7 @@
 	<acme:form-textarea code="administrator.inquiry.form.label.description" path="description"/>
 	<acme:form-money code="administrator.inquiry.form.label.min-money" path="minMoney"/>
 	<acme:form-money code="administrator.inquiry.form.label.max-money" path="maxMoney"/>
-	<acme:form-textbox code="administrator.inquiry.form.label.contact-email" path="contactEmail"/>
+	<acme:form-customemail code="administrator.inquiry.form.label.contact-email" path="contactEmail"/>
 	
 	<acme:form-submit test="${command == 'create'}" code="administrator.inquiry.form.button.create" action="/administrator/inquiry/create"/>
 	<acme:form-submit test="${command == 'show'}" code="administrator.inquiry.form.button.update" action="/administrator/inquiry/update"/>
