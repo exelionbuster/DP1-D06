@@ -61,7 +61,8 @@ public class CustomEmailFormatter implements Formatter<CustomEmail> {
 		} else {
 			displayName = matcher.group("DN");
 			if (displayName != null) {
-				if (!displayName.trim().equals("")) {
+				displayName = displayName.trim();
+				if (!displayName.equals("")) {
 					email = matcher.group("EN");
 				} else {
 					errorMessage = MessageHelper.getMessage("default.error.conversion", null, "Invalid value", locale);

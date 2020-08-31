@@ -186,7 +186,8 @@ public class EntrepreneurInvestmentRoundUpdateService implements AbstractUpdateS
 				errors.state(request, tieneTresPartes, "ticker", "entrepreneur.investment-round.error.ticker");
 			}
 
-			if (validTicker) {
+			InvestmentRound invR = this.repository.findOneById(entity.getId());
+			if (validTicker && !invR.getTicker().equals(entity.getTicker())) {
 				errors.state(request, !this.repository.checkUniqueTicker(entity.getTicker()), "ticker", "entrepreneur.investment-round.error.unique-ticker");
 			}
 		}
