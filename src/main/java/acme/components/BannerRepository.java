@@ -28,7 +28,7 @@ public interface BannerRepository extends AbstractRepository {
 		List<Banner> banners;
 
 		bannerCount = this.countBanners();
-		if (bannerCount == 0) {
+		if (bannerCount != 0) {
 			random = ThreadLocalRandom.current();
 			bannerIndex = random.nextInt(0, bannerCount);
 
