@@ -22,6 +22,7 @@ entrepreneur.investment-round.form.label.link = Enlace:
 
 entrepreneur.investment-round.form.label.finalMode = Público
 
+entrepreneur.investment-round.form.button.accounting-records = Registros contables
 entrepreneur.investment-round.form.button.update = Actualizar
 entrepreneur.investment-round.form.button.create = Crear
 entrepreneur.investment-round.form.button.delete = Borrar

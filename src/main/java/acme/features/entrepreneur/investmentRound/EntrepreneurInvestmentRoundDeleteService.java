@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.entities.accountingRecords.AccountingRecord;
 import acme.entities.activities.Activity;
 import acme.entities.forums.Forum;
 import acme.entities.investmentRounds.InvestmentRound;
@@ -57,6 +58,14 @@ public class EntrepreneurInvestmentRoundDeleteService implements AbstractDeleteS
 
 		request.unbind(entity, model, "ticker", "creationDate", "kind", "title", "description", "amount", "link", "finalMode");
 
+		Collection<AccountingRecord> accountingRecords = this.repository.findAllByInvestmentRoundId(entity.getId());
+
+		if (!accountingRecords.isEmpty()) {
+			model.setAttribute("accountingRecords", accountingRecords);
+		} else {
+			model.setAttribute("accountingRecords", null);
+		}
+
 		Collection<Activity> activities = this.activityRepository.findActivitiesByInvestmentRound(entity.getId());
 
 		if (!activities.isEmpty()) {
@@ -101,6 +110,15 @@ public class EntrepreneurInvestmentRoundDeleteService implements AbstractDeleteS
 
 		if (errors.hasErrors()) {
 			request.getModel().setAttribute("isFinalMode", entity.isFinalMode());
+
+			Collection<AccountingRecord> accountingRecords = this.repository.findAllByInvestmentRoundId(entity.getId());
+
+			if (!accountingRecords.isEmpty()) {
+				request.getModel().setAttribute("accountingRecords", accountingRecords);
+			} else {
+				request.getModel().setAttribute("accountingRecords", null);
+			}
+
 		}
 
 	}
